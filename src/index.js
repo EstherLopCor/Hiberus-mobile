@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom/client";
-import List from "./components/List";
+import Login from "./components/Login";
 
 function App() {
   return (
     <div className="container">
-      <List />
+      <Login />
     </div>
   );
 }
