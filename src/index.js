@@ -1,16 +1,11 @@
-import ReactDOM from "react-dom/client";
-import Login from "./components/Login";
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import Form from "./components/Form";
 
-function App() {
-  return (
-    <div className="container">
-      <Login />
-    </div>
-  );
-}
-
-const container = document.getElementById("app");
-
-const root = ReactDOM.createRoot(container);
-
-root.render(<App />);
+const root = ReactDOM.createRoot(document.getElementById("app"));
+root.render(
+  <BrowserRouter>
+    <Form />
+  </BrowserRouter>
+);

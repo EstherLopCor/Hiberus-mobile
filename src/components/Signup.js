@@ -1,26 +1,39 @@
-function Singout() {
+import { Link } from "react-router-dom";
+function Signup() {
   return (
-    <form action="">
+    <form className="">
+      <h3>Login:</h3>
       <fieldset>
-        <p>
-          <label htmlFor="">Email: </label>
-          <input type="text" name="email" id="email" />
+        <p className="form-group">
+          <input type="email" name="email" id="email" placeholder="Email:" />
         </p>
-        <p>
-          <label htmlFor="">Name: </label>
-          <input type="text" name="name" id="name" />
+        <p className="form-group">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password:"
+          />
+        </p>{" "}
+        <p className="form-group">
+          <input type="name" name="name" id="name" placeholder="Name:" />
         </p>
-        <p>
-          <label htmlFor="">Surname: </label>
-          <input type="text" name="surname" id="surname" />
+        <p className="form-group">
+          <input
+            type="suername"
+            name="suername"
+            id="suername"
+            placeholder="Surname:"
+          />
         </p>
+        <button type="submit" className="btn btn-primary">
+          Register
+        </button>
         <p>
-          <label htmlFor="">Password </label>
-          <input type="text" name="password" id="password" />
+          Click <Link to="/">here</Link> to register
         </p>
-        <button>Iniciar sesión</button>
       </fieldset>
     </form>
   );
 }
-export default Singout;
+export default Signup;
