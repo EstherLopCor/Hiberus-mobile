@@ -1,11 +1,26 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/main.css";
 import { Link } from "react-router-dom";
-//import Signup from "./Signup";
+import { useState } from "react";
+import { Post } from "../services/Post";
 
-function Login() {
+function Login({ setToken }) {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const body = {
+      email: email,
+      password: password,
+    };
+    Post("http://51.38.51.187:5050/api/v1/auth/log-in", body, (data) => {
+      setToken(data.accessToken);
+    });
+  };
+
   return (
-    <form className="center">
+    <form className="center" onSubmit={handleSubmit}>
       <fieldset>
         <h2 className="separate">Hiberus</h2>
         <p className="separate">Login to hiberus</p>
@@ -17,6 +32,9 @@ function Login() {
             id="email"
             placeholder="Email"
             className="col-sm-2 col-form-label"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
         </div>
         <div className="form-group separate">
@@ -27,17 +45,20 @@ function Login() {
             id="password"
             placeholder="Password"
             className="col-sm-2 col-form-label"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
         </div>
         <div className="form-group row ">
-          <div className="col-sm-10 separate">
+          <div className="col-sm-10">
             <button type="submit" className="btn btn-primary">
               Sign in
             </button>
           </div>
         </div>
         <p>
-          Don´t have an account? Clik <Link to="/signup">here</Link> to sign up
+          Don´t have an account yet? <Link to="/signup">Sign up</Link>
         </p>
       </fieldset>
     </form>
