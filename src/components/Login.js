@@ -21,11 +21,11 @@ function Login({ setToken }) {
   };
 
   return (
-    <form className="center" onSubmit={handleSubmit}>
-      <fieldset>
-        <h2 className="separate">Hiberus</h2>
-        <p className="separate">Login to hiberus</p>
-        <div className="form-group separate">
+    <form className="center " onSubmit={handleSubmit}>
+      <fieldset className="cen">
+        <h1 className="separate">Hiberus</h1>
+        <h3 className="separate">Login:</h3>
+        <div className=" form-group separate">
           <input
             required
             type="email"
@@ -33,7 +33,6 @@ function Login({ setToken }) {
             id="email"
             placeholder="Email"
             value={email}
-            className="col-sm-2 col-form-label"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -46,7 +45,6 @@ function Login({ setToken }) {
             name="password"
             id="password"
             placeholder="Password"
-            className="col-sm-2 col-form-label"
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
@@ -54,13 +52,13 @@ function Login({ setToken }) {
           />
         </div>
         <div className="form-group row ">
-          <div className="col-sm-10">
+          <div className="col-sm-10 separate">
             <button type="submit" className="btn btn-primary">
               Sign in
             </button>
           </div>
         </div>
-        <p>
+        <p className="separate">
           Don´t have an account yet? <Link to="/signup">Sign up</Link>
         </p>
       </fieldset>

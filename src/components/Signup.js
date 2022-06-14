@@ -26,8 +26,8 @@ function Signup() {
 
   return (
     <form className="center" onSubmit={handleSubmit}>
-      <h3 className="separate">Register:</h3>
-      <fieldset>
+      <fieldset className="cen">
+        <h3 className="separate">Register:</h3>
         <div className="form-group separate">
           <input
             type="email"
