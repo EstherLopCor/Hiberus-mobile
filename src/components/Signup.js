@@ -4,6 +4,7 @@ import "../styles/main.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Post } from "../services/Post";
+
 function Signup() {
   const [name, setName] = useState();
   const [surname, setSurname] = useState();

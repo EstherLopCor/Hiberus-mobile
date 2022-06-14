@@ -1,7 +1,7 @@
 export const Post = async (url, data, callback, token = "") => {
   try {
     const response = await fetch(url, {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: ` Bearer ${token}`,
