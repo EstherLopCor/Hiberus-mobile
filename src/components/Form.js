@@ -9,7 +9,11 @@ function Form() {
   return (
     <main>
       <Routes>
-        <Route exact path="/" element={<Login setToken={setToken} />} />
+        <Route
+          exact
+          path="/"
+          element={<Login setToken={setToken} token={token} />}
+        />
         <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/users" element={<Users />} />
       </Routes>
