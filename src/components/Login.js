@@ -10,6 +10,7 @@ function Login({ setToken }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const body = {
       email: email,
       password: password,
@@ -31,6 +32,7 @@ function Login({ setToken }) {
             name="email"
             id="email"
             placeholder="Email"
+            value={email}
             className="col-sm-2 col-form-label"
             onChange={(e) => {
               setEmail(e.target.value);
@@ -45,6 +47,7 @@ function Login({ setToken }) {
             id="password"
             placeholder="Password"
             className="col-sm-2 col-form-label"
+            value={password}
             onChange={(e) => {
               setPassword(e.target.value);
             }}

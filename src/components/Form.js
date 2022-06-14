@@ -3,7 +3,6 @@ import { useLocalStorage } from "../hooks/useLocalStotage";
 import Login from "./Login";
 import Signup from "./Signup";
 import Users from "./Users";
-
 function Form() {
   const [token, setToken] = useLocalStorage("", "token");
   console.log(token);
