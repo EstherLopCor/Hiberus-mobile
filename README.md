@@ -13,4 +13,3 @@ Además de separar el metodo Get del Post para que no fuese tan lioso.
 Para hacer esta prueba he dedicado aproximadamente unas 12 horas aunque mcuhas de ellas han sido a investigar y no a crear código como tal
 ## Problemas/Dificultades encontrados y soluciones implementadas
 El primer problema al que me he tenido que afrentar es a la falta de conocimiento y experiencia creando este tipo de aplicaciones, lo cuál he solventado con la investigación y autoaprendizaje.
-Ot

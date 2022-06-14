@@ -1,15 +1,13 @@
 import { useNavigate } from "react-router-dom";
-function Logout(token) {
+function Logout(setToken) {
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
+  const close = (e) => {
     e.preventDefault();
-
-    if (token) {
-      navigate("/");
-    }
+    setToken("");
+    navigate("/");
   };
   return (
-    <button type="submit" className="btn btn-primary" onSubmit={handleSubmit}>
+    <button type="submit" className="btn btn-primary" onSubmit={close}>
       Sign out
     </button>
   );
