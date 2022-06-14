@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/main.css";
 import { Link, useNavigate } from "react-router-dom";
+
 import { useState } from "react";
 import { Post } from "../services/Post";
 
@@ -22,7 +23,7 @@ function Login({ token, setToken }) {
     if (token) {
       navigate("/users");
     } else {
-      navigate("/login");
+      navigate("/");
     }
   };
 
